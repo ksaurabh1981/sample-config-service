@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: sample-config-client
+  cloud:
+    config:
+      name: sample-config,service1-config
+      env: default,dev,qa,prd
+      label: master, branch_name
+      uri: http://localhost:8881

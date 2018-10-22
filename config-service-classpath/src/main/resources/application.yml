@@ -1,0 +1,27 @@
+server:
+  port: 8881
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+
+spring:
+   cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: https://github.com/ksaurabh1981/sample-config-properties.git
+          skipSslValidation: true
+
+eureka:
+  instance:
+    hostname: localhost
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/

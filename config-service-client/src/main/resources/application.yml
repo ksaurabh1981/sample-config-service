@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.springframework.web: INFO
+    
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: localhost
+    port: 25
+    from: kumarsaurabh2006@gmail.com
+    properties:
+      mail:
+        smtp:
+          auth: false
