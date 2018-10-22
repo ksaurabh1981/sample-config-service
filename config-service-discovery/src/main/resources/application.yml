@@ -5,6 +5,8 @@ logging:
   level:
     root: INFO
     org.springframework: INFO
+    org.springframework.web: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
 
 spring:
    cloud:
@@ -21,7 +23,7 @@ eureka:
     hostname: localhost
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8762/eureka/
