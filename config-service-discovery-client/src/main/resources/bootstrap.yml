@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-service-discovery-client
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-service-discovery
+      name: sample-config,service1-config
+      env: default,dev,qa,prd
+      label: master, branch_name
+ 
+eureka:
+  instance:
+    hostname: localhost
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
