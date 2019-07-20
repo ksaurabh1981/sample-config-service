@@ -19,5 +19,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ksaurabh1981/sample-config-properties.git
+          uri: https://github.com/ksaurabh51005/sample-config-service.git
+          searchPaths: config-repo
           skipSslValidation: true

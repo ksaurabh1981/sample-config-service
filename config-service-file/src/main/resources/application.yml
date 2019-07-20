@@ -15,4 +15,4 @@ spring:
     config:
       server:
         native:
-          searchLocations: file:///D:/config-repo
+          searchLocations: file:///D:/kumar/projects/my-github/sample-config-service/config-repo
